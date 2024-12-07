@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plinko Game</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Paytone+One&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="game">
+          <div class="score-board" id="score-board">
+            <div class="score">0x</div>
+          </div>
+          <div class="plinko-board" id="plinko-board">
+            <div class="bucket-container" id="bucket">
+              <div class="bucket">24</div>
+              <div class="bucket">9</div>
+              <div class="bucket">7</div>
+              <div class="bucket">5</div>
+              <div class="bucket">2</div>
+              <div class="bucket">0</div>
+              <div class="bucket">2</div>
+              <div class="bucket">5</div>
+              <div class="bucket">7</div>
+              <div class="bucket">9</div>
+              <div class="bucket">24</div>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="button" id="start-button">Start Plinko</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

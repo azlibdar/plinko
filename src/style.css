@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Outfit", sans-serif;
+  font-display: swap;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Paytone One", sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  background-color: #0d0d0e;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem 1rem 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 40rem;
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  background-color: #17191a;
+  border-radius: 1rem;
+}
+
+.game {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.score-board {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+}
+
+.score-board::-webkit-scrollbar {
+  display: none;
+}
+
+.score {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #808587;
+  background-color: #26282c;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.score.win {
+  color: #3bc217;
+}
+
+.plinko-board {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bucket-container {
+  position: absolute;
+  bottom: -2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 12px;
+  gap: 1px;
+}
+
+.bucket {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 500;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.bucket:nth-of-type(1),
+.bucket:nth-of-type(11) {
+  background-color: #f72f5a;
+  padding: 0 0.2rem;
+}
+
+.bucket:nth-of-type(2),
+.bucket:nth-of-type(10) {
+  background-color: #f94c58;
+}
+
+.bucket:nth-of-type(3),
+.bucket:nth-of-type(9) {
+  background-color: #f56358;
+}
+
+.bucket:nth-of-type(4),
+.bucket:nth-of-type(8) {
+  background-color: #fb7d57;
+}
+
+.bucket:nth-of-type(5),
+.bucket:nth-of-type(7) {
+  background-color: #fd9b5d;
+}
+
+.bucket:nth-of-type(6) {
+  background-color: #ffbb62;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.peg {
+  width: 0.5rem;
+  aspect-ratio: 1/1;
+  background-color: #9ea1a2;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.peg.hit {
+  background-color: #ffffff;
+}
+
+.ball {
+  width: 1rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -2rem;
+  /* linear gradient */
+  background: linear-gradient(to bottom, #39c217 0%, #2b8c30 100%);
+  border-top: 2px solid #c2e6b9;
+  transition: all 0.04s linear;
+  will-change: transform;
+}
+
+button {
+  font-family: "Paytone One", sans-serif;
+  width: 100%;
+  display: block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 0.5rem;
+  /* add conic gradient two colors 2b8c30 and 39c217 */
+  background: conic-gradient(#2b8c30 0%, #39c217 100%);
+}
+
+.controls button:active {
+  transform: translateY(1px);
+}
