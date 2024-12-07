@@ -186,11 +186,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   top: -2rem;
-  /* linear gradient */
   background: linear-gradient(to bottom, #39c217 0%, #2b8c30 100%);
   border-top: 2px solid #c2e6b9;
-  transition: all 0.04s linear;
-  will-change: transform;
+  transition: all 0.05s ease;
 }
 
 button {
